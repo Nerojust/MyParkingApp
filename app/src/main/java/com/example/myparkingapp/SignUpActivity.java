@@ -10,7 +10,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class SignUp extends AppCompatActivity {
+public class SignUpActivity extends AppCompatActivity {
     private EditText firstNameEditText;
     private EditText lastNameEditText;
     private EditText emailAddressEditText;
@@ -58,15 +58,15 @@ public class SignUp extends AppCompatActivity {
                 if (retrievedValueTypeByTheUser.length() >= 6) {//this returns a boole
                     // the user has typed something,do something in this block
                     if (retrievedPasswordTypedByTheUser.length() >= 6) {
-                        Intent intent = new Intent(SignUp.this, ResetPassword.class);
+                        Intent intent = new Intent(SignUpActivity.this, ResetPasswordActivity.class);
                         intent.putExtra("username", retrievedValueTypeByTheUser);
                         intent.putExtra("password", retrievedPasswordTypedByTheUser);
                         startActivity(intent);
                     } else {
-                        Toast.makeText(SignUp.this, "password is required", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(SignUpActivity.this, "password is required", Toast.LENGTH_SHORT).show();
                     }
                 } else {
-                    Toast.makeText(SignUp.this, "Username is required", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(SignUpActivity.this, "Username is required", Toast.LENGTH_SHORT).show();
                 }
 
                 //now we will toast the retrieved value as the message below
@@ -81,7 +81,7 @@ public class SignUp extends AppCompatActivity {
         resetPasswordTextView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(SignUp.this,ResetPassword.class);
+                Intent intent = new Intent(SignUpActivity.this, ResetPasswordActivity.class);
                 startActivity(intent);
             }
         });

@@ -36,7 +36,7 @@ public class ParkCarActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String retrievedPasswordTypedByTheUser = passWordEditText.getText().toString();
                 if (retrievedPasswordTypedByTheUser.length() >= 6) {
-                    Intent intent = new Intent(ParkCarActivity.this, Page.class);
+                    Intent intent = new Intent(ParkCarActivity.this, PageActivity.class);
 
                     intent.putExtra("password", retrievedPasswordTypedByTheUser);
                     startActivity(intent);

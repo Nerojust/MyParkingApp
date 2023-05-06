@@ -7,7 +7,7 @@ import android.view.View;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 
-public class Page extends AppCompatActivity {
+public class PageActivity extends AppCompatActivity {
     private AppCompatButton skipButton;
     private AppCompatButton nextButton;
 
@@ -28,14 +28,14 @@ public class Page extends AppCompatActivity {
         skipButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Page.this,Dash.class);
+                Intent intent = new Intent(PageActivity.this, DashboardActivity.class);
                 startActivity(intent);
             }
         });
         nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Page.this,Dash.class);
+                Intent intent = new Intent(PageActivity.this, DashboardActivity.class);
                 startActivity(intent);
             }
         });

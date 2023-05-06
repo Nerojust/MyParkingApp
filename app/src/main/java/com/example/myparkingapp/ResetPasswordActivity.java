@@ -11,7 +11,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class ResetPassword extends AppCompatActivity {
+public class ResetPasswordActivity extends AppCompatActivity {
     private EditText resetPasswordEditText;
     private EditText passWordEditText;
     private ImageView arrowBack;
@@ -49,15 +49,15 @@ public class ResetPassword extends AppCompatActivity {
                 if (retrievedValueTypeByTheUser.length() >= 6) {//this returns a boole
                     // the user has typed something,do something in this block
                     if (retrievedPasswordTypedByTheUser.length() >= 6) {
-                        Intent intent = new Intent(ResetPassword.this, MainActivity.class);
+                        Intent intent = new Intent(ResetPasswordActivity.this, MainActivity.class);
                         intent.putExtra("resetpassword", retrievedValueTypeByTheUser);
                         intent.putExtra("password", retrievedPasswordTypedByTheUser);
                         startActivity(intent);
                     } else {
-                        Toast.makeText(ResetPassword.this, "Reset password is required", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(ResetPasswordActivity.this, "Reset password is required", Toast.LENGTH_SHORT).show();
                     }
                 } else {
-                    Toast.makeText(ResetPassword.this, "Username is required", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(ResetPasswordActivity.this, "Username is required", Toast.LENGTH_SHORT).show();
                 }
 
                 //now we will toast the retrieved value as the message below
